@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --color-yellow: hsl(47, 88%, 63%);
+      --color-white: hsl(0, 0%, 100%);
+      --color-gray-500: hsl(0, 0%, 42%);
+      --color-gray-950: hsl(0, 0%, 7%);
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-yellow);
+
+      font-family: sans-serif, Figtree;
+      font-size: 16px;
+    }
+
+    .card {
+      width: 384px;
+      box-sizing: border-box;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px 0;
+      border-radius: 20px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-gray-950);
+      box-shadow: 8px 8px 0 var(--color-gray-950);
+
+      @media (max-width: 375px) {
+        width: 327px;
+      }
+
+      .card__img {
+        width: 100%;
+        height: 200px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .info__button {
+        width: fit-content;
+        padding: 4px 12px;
+        background-color: var(--color-yellow);
+        border: none;
+        border-radius: 4px;
+
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 0px;
+        color: var(--color-gray-950);
+      }
+
+      .info__date-publish {
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0px;
+        color: var(--color-gray-500);
+      }
+
+      .info__title {
+        font-weight: 800;
+        font-size: 24px;
+        letter-spacing: 0px;
+        color: var(--color-gray-950);
+      }
+
+      .info__title:hover {
+        color: var(--color-yellow);
+        cursor: pointer;
+      }
+
+      .info__text {
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0px;
+        color: var(--color-gray-500);
+      }
+
+      .author {
+        display: flex;
+        align-items: center;
+        gap: 0 12px;
+
+      }
+
+      .author__photo {
+        width: 32px;
+        height: 32px;
+      }
+
+      .author__name {
+        margin: 0;
+      }
+
+
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="card__img" src="./assets/images/illustration-article.svg" />
+
+    <div class="card__info info">
+      <button class="info__button">Learning</button>
+      <h3 class="info__date-publish">Published 21 Dec 2023</h3>
+      <h1 class="info__title">HTML & CSS foundations</h1>
+      <span class="info__text">These languages are the backbone of every website, defining structure, content, and presentation</span>
+    </div>
+
+    <div class="card__author author">
+      <img class="author__photo"  src="./assets/images/image-avatar.webp" alt="profile photo">
+      <h3 class="author__name">Greg Hooper</h3>
+    </div>
+  </div>
+</body>
+</html>
